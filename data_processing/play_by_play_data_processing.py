@@ -23,7 +23,7 @@ def create_processed_play_by_play_data(path_to_file):
     # print(df.dtypes)
 
     new_cols = ["Home", "Away", "Incomplete Passes", "Touchbacks", "Interceptions", "Fumble Forced",
-                "Fumble  Forced", "Safety", "Penalty", "Tackled For Loss", "Rush Attempts", "Pass Attempts",
+                "Fumble Not Forced", "Safety", "Penalty", "Tackled For Loss", "Rush Attempts", "Pass Attempts",
                 "Sack", "Touchdowns", "Pass Touchdowns", "Rush Touchdowns", "Extra Point Attempts", "Two Point Attempts",
                 "Field Goal Attempts", "Punt Attempts", "Fumble", "Complete Passes"]
     new_data = []
