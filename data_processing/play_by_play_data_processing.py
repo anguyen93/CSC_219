@@ -162,13 +162,13 @@ if __name__ == '__main__':
     processed_nfl_play_by_play_data_dir = "..\\processed_nfl_play_by_play_data"
     processed_nfl_play_by_play_data_path = os.path.join(current_dir, processed_nfl_play_by_play_data_dir)
 
-    files = os.listdir(nfl_play_by_play_data_path)  # Getting the list of files in the play_by_play_data dir in the regular_season
-
     # Create the processed nfl odds data directory if it doesn't exist
     if (not os.path.isdir(processed_nfl_play_by_play_data_path)):
         print("Creating ", processed_nfl_play_by_play_data_path)
         os.makedirs(processed_nfl_play_by_play_data_path)
         print("Directory ", processed_nfl_play_by_play_data_path, " is now created\n")
+
+    files = os.listdir(nfl_play_by_play_data_path)  # Getting the list of files in the play_by_play_data dir in the regular_season
 
     # file = files[0]
 

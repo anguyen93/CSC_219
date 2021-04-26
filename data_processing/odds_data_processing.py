@@ -119,8 +119,6 @@ if __name__ == '__main__':
     processed_nfl_odds_data_dir = "..\\processed_nfl_odds_data"
     processed_nfl_odds_data_path = os.path.join(current_dir, processed_nfl_odds_data_dir)
 
-    files = os.listdir(nfl_odds_data_path) # Getting the list of files in the nfl_odds_data dir
-
     # Create the processed nfl odds data directory if it doesn't exist
     if(not os.path.isdir(processed_nfl_odds_data_path)):
         print("Creating ", processed_nfl_odds_data_path)
@@ -128,6 +126,8 @@ if __name__ == '__main__':
         print("Directory ", processed_nfl_odds_data_path, " is now created\n")
 
     print("Reading files for data processing")
+
+    files = os.listdir(nfl_odds_data_path)  # Getting the list of files in the nfl_odds_data dir
 
     # file = files[0]
 
