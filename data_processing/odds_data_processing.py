@@ -10,14 +10,14 @@ teams = {
     'Minnesota': 'MIN',
     'Washington': 'WAS',
     'Philadelphia': 'PHI',
-    'Buffalo': 'BUG',
+    'Buffalo': 'BUF',
     'NYJets': 'NYJ',
     'Baltimore': 'BAL',
     'Miami': 'MIA',
     'SanFrancisco': 'SF',
     'TampaBay': 'TB',
     'KansasCity': 'KC',
-    'Jacksonville': 'JAX',
+    'Jacksonville': 'JAC',
     'Tennessee': 'TEN',
     'Cleveland': 'CLE',
     'LARams': 'LA',
@@ -116,7 +116,7 @@ if __name__ == '__main__':
     current_dir = os.getcwd()
     nfl_odds_data_path_dir = "..\\data\\nfl_odds_data"
     nfl_odds_data_path = os.path.join(current_dir, nfl_odds_data_path_dir)
-    processed_nfl_odds_data_dir = "..\\data\\processed_nfl_odds_data"
+    processed_nfl_odds_data_dir = "..\\processed_nfl_odds_data"
     processed_nfl_odds_data_path = os.path.join(current_dir, processed_nfl_odds_data_dir)
 
     files = os.listdir(nfl_odds_data_path) # Getting the list of files in the nfl_odds_data dir

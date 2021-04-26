@@ -2,6 +2,11 @@ import numpy as np
 import pandas as pd
 import os
 
+# Teams that have the old acronyms.
+teams = {
+    'STL': 'LA',
+    'SD': 'LAC'
+}
 """
 Creates the new processed data for the play by play data for both NFL teams
 """
@@ -63,6 +68,20 @@ def create_processed_play_by_play_data(path_to_file):
         # print(game_id, home, away, incomplete_passes, touchbacks, interceptions, fumble_forced, fumble__forced, safety, penalty, tackled_for_loss, rush_attempt, pass_attempt, sack, touchdown, pass_toucdown, rush_touchdown, extra_point_attempt, two_point_attempt, field_goal_attempt, punt_attempt, fumble, complete_pass)
         # if(fumble_not_forced > 0):
         #     print(fumble_not_forced)
+
+        # If the acronym is either 'STL' and 'SD', it should be 'LA' and 'LAC'.
+        if(home == 'STL'):
+            home = teams[home]
+            # print("home:" + home)
+        if(home == 'SD'):
+            home = teams[home]
+            # print("home: " + home)
+        if(away == 'STL'):
+            away = teams[away]
+            # print("away: " + away)
+        if(away == 'SD'):
+            away = teams[away]
+            # print("away: " + away)
 
         # Storing the play by play data in a dictionary to keep track which data belongs to which.
         if(game_id not in data):
@@ -140,7 +159,7 @@ if __name__ == '__main__':
     current_dir = os.getcwd()
     nfl_play_by_play_data_dir = "..\\data\\play_by_play_data\\regular_season"
     nfl_play_by_play_data_path = os.path.join(current_dir, nfl_play_by_play_data_dir)
-    processed_nfl_play_by_play_data_dir = "..\\data\\processed_nfl_play_by_play_data"
+    processed_nfl_play_by_play_data_dir = "..\\processed_nfl_play_by_play_data"
     processed_nfl_play_by_play_data_path = os.path.join(current_dir, processed_nfl_play_by_play_data_dir)
 
     files = os.listdir(nfl_play_by_play_data_path)  # Getting the list of files in the play_by_play_data dir in the regular_season
